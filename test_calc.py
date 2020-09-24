@@ -16,6 +16,11 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc.multiply(100, -1), -100)
         self.assertEqual(calc.multiply(10, 10), 100)
         self.assertEqual(calc.multiply(10, 0), 0)
+    def test_divide(self):
+        self.assertEqual(calc.divide(10, 5), 2)
+        self.assertEqual(calc.divide(100, -1), -100)
+        self.assertEqual(calc.divide(10, 10), 1)
+        self.assertEqual(calc.divide(10, 0), 'you cannot divide by zero')
 
 if __name__ == "__main__":
     unittest.main()
